@@ -1,5 +1,6 @@
 # Variables de Entorno
 ### ¿Qué son las variables de entorno?
+Son variables dinámicas que pueden alterar el comportamiento de los procesos en ejecución de un ordenador. Son pares nombre:valor
 # COMPLETAR
 
 ### Para crear un contenedor con variables de entorno
@@ -9,18 +10,26 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 ```
 
 ### Crear un contenedor a partir de la imagen de nginx:alpine con las siguientes variables de entorno: username y role. Para la variable de entorno rol asignar el valor admin.
-
+```
+docker run -d --name srvweb nginx:alpine -e username=leoxd -e role=admin
+```
 # COMPLETAR
 
 # CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR
+<img width="992" height="595" alt="image" src="https://github.com/user-attachments/assets/b725db66-5de5-4baa-89f7-914cd804846d" />
+
 
 ### Crear un contenedor con la imagen de mysql, mapear todos los puertos
 # COMPLETAR
-
+docker run -P --name mysql mysql
 ### ¿El contenedor se está ejecutando?
 # COMPLETAR
-
+No se está ejecutando.
 ### Identificar el problema
+Se necesita especificar una variable de entorno:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
 # COMPLETAR
 
 ### Para crear un contenedor con variables de entorno especificadas
@@ -37,3 +46,5 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 
 ### ¿Qué bases de datos existen en el contenedor creado?
 # COMPLETAR
+<img width="403" height="385" alt="image" src="https://github.com/user-attachments/assets/b9a96f99-60e8-43bd-a543-16588bcf3e9d" />
+
