@@ -27,8 +27,7 @@ NOMBRE VARCHAR(20) NOT NULL);
 ```
 Inserción de los datos
 ```sql
-insert into public.personas(nombre)values('jonathan Pagual'),
-('Leonel'),
+insert into public.personas(nombre)values('Leonel'),
 ('Naty'),
 ('Zoe');
 ```
